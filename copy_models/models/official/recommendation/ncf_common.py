@@ -167,7 +167,7 @@ def define_ncf_flags():
 
   flags_core.set_defaults(
       model_dir="/tmp/ncf/",
-      data_dir="/tmp/movielens-data/",
+      data_dir="/content/cmpe256-hw2/copy_models/models/official/recommendation/raaga_data_dir/",
       dataset=movielens.ML_1M,
       train_epochs=2,
       batch_size=99000,
@@ -176,7 +176,7 @@ def define_ncf_flags():
 
   # Add ncf-specific flags
   flags.DEFINE_boolean(
-      name="download_if_missing", default=True, help=flags_core.help_wrap(
+      name="download_if_missing", default=False, help=flags_core.help_wrap(
           "Download data to data_dir if it is not already present."))
 
   flags.DEFINE_integer(
