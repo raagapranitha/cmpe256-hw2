@@ -247,7 +247,7 @@ def run_ncf(_):
   producer, input_meta_data = None, None
   generate_input_online = params["train_dataset_path"] is None
 
-  if False:
+  if generate_input_online:
     # Start data producing thread.
     num_users, num_items, _, _, producer = ncf_common.get_inputs(params)
     producer.start()
