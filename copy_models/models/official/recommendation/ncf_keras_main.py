@@ -328,6 +328,7 @@ def run_ncf(_):
           verbose=2)
 
       logging.info("Training done. Start evaluating")
+      keras_model.save('path/to/save')
 
       eval_loss_and_metrics = keras_model.evaluate(
           eval_input_dataset, steps=num_eval_steps, verbose=2)
